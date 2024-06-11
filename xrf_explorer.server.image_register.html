@@ -290,11 +290,361 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="xrf-explorer-server-image-register-register-image-module">
-<h2>xrf_explorer.server.image_register.register_image module<a class="headerlink" href="#xrf-explorer-server-image-register-register-image-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.image_register.register_image">
+<span id="xrf-explorer-server-image-register-register-image-module"></span><h2>xrf_explorer.server.image_register.register_image module<a class="headerlink" href="#module-xrf_explorer.server.image_register.register_image" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.apply_perspective_transformation">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">apply_perspective_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_to_transform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_src</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_dest</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#apply_perspective_transformation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.apply_perspective_transformation" title="Link to this definition">¶</a></dt>
+<dd><p>Applies a perspective transformation on an image based on source and destination points.
+:param image_to_transform: A MatLike representation of the image to be transformed.
+:param points_src: A MatLike representation of the source points.
+:param points_dest: A MatLike representation of the destination points.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.getPerspectiveTransform">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">getPerspectiveTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">solveMethod</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span></span></span><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.getPerspectiveTransform" title="Link to this definition">¶</a></dt>
+<dd><p>.   &#64;brief Calculates a perspective transform from four pairs of the corresponding points.
+.   
+.   The function calculates the f$3 times 3f$ matrix of a perspective transform so that:
+.   
+.   f[begin{bmatrix} t_i x’_i \ t_i y’_i \ t_i end{bmatrix} = texttt{map_matrix} cdot begin{bmatrix} x_i \ y_i \ 1 end{bmatrix}f]
+.   
+.   where
+.   
+.   f[dst(i)=(x’_i,y’_i), src(i)=(x_i, y_i), i=0,1,2,3f]
+.   
+.   &#64;param src Coordinates of quadrangle vertices in the source image.
+.   &#64;param dst Coordinates of the corresponding quadrangle vertices in the destination image.
+.   &#64;param solveMethod method passed to cv::solve (#DecompTypes)
+.   
+.   &#64;sa  findHomography, warpPerspective, perspectiveTransform</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.get_image_registered_to_data_cube">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">get_image_registered_to_data_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#get_image_registered_to_data_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.get_image_registered_to_data_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Registers an image to align with the dimensions of the data cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source</strong> – The name of the data source.</p></li>
+<li><p><strong>image_name</strong> – The name of the image to be registered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The registered image or None in case of an error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.imread">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">imread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span></span></span><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.imread" title="Link to this definition">¶</a></dt>
+<dd><p>.   &#64;brief Loads an image from a file.
+.   
+.   &#64;anchor imread
+.   
+.   The function imread loads an image from the specified file and returns it. If the image cannot be
+.   read (because of missing file, improper permissions, unsupported or invalid format), the function
+.   returns an empty matrix ( Mat::data==NULL ).
+.   
+.   Currently, the following file formats are supported:
+.   
+.   -   Windows bitmaps - *.bmp, *.dib (always supported)
+.   -   JPEG files - *.jpeg, *.jpg, *.jpe (see the <em>Note</em> section)
+.   -   JPEG 2000 files - *.jp2 (see the <em>Note</em> section)
+.   -   Portable Network Graphics - *.png (see the <em>Note</em> section)
+.   -   WebP - *.webp (see the <em>Note</em> section)
+.   -   AVIF - *.avif (see the <em>Note</em> section)
+.   -   Portable image format - *.pbm, *.pgm, *.ppm *.pxm, *.pnm (always supported)
+.   -   PFM files - *.pfm (see the <em>Note</em> section)
+.   -   Sun rasters - *.sr, *.ras (always supported)
+.   -   TIFF files - *.tiff, *.tif (see the <em>Note</em> section)
+.   -   OpenEXR Image files - *.exr (see the <em>Note</em> section)
+.   -   Radiance HDR - *.hdr, *.pic (always supported)
+.   -   Raster and Vector geospatial data supported by GDAL (see the <em>Note</em> section)
+.   
+.   &#64;note
+.   -   The function determines the type of an image by the content, not by the file extension.
+.   -   In the case of color images, the decoded images will have the channels stored in <strong>B G R</strong> order.
+.   -   When using IMREAD_GRAYSCALE, the codec’s internal grayscale conversion will be used, if available.
+.       Results may differ to the output of cvtColor()
+.   -   On Microsoft Windows* OS and MacOSX*, the codecs shipped with an OpenCV image (libjpeg,
+.       libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,
+.       and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware
+.       that currently these native image loaders give images with different pixel values because of
+.       the color management embedded into MacOSX.
+.   -   On Linux*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for
+.       codecs supplied with an OS image. Install the relevant packages (do not forget the development
+.       files, for example, “libjpeg-dev”, in Debian* and Ubuntu*) to get the codec support or turn
+.       on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.
+.   -   In the case you set <em>WITH_GDAL</em> flag to true in CMake and &#64;ref IMREAD_LOAD_GDAL to load the image,
+.       then the [GDAL](<a class="reference external" href="http://www.gdal.org">http://www.gdal.org</a>) driver will be used in order to decode the image, supporting
+.       the following formats: [Raster](<a class="reference external" href="http://www.gdal.org/formats_list.html">http://www.gdal.org/formats_list.html</a>),
+.       [Vector](<a class="reference external" href="http://www.gdal.org/ogr_formats.html">http://www.gdal.org/ogr_formats.html</a>).
+.   -   If EXIF information is embedded in the image file, the EXIF orientation will be taken into account
+.       and thus the image will be rotated accordingly except if the flags &#64;ref IMREAD_IGNORE_ORIENTATION
+.       or &#64;ref IMREAD_UNCHANGED are passed.
+.   -   Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.
+.   -   By default number of pixels must be less than 2^30. Limit can be set using system
+.       variable OPENCV_IO_MAX_IMAGE_PIXELS
+.   
+.   &#64;param filename Name of file to be loaded.
+.   &#64;param flags Flag that can take values of cv::ImreadModes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.imwrite">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">imwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span></span></span><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.imwrite" title="Link to this definition">¶</a></dt>
+<dd><p>.   &#64;brief Saves an image to a specified file.
+.   
+.   The function imwrite saves the image to the specified file. The image format is chosen based on the
+.   filename extension (see cv::imread for the list of extensions). In general, only 8-bit unsigned (CV_8U)
+.   single-channel or 3-channel (with ‘BGR’ channel order) images
+.   can be saved using this function, with these exceptions:
+.   
+.   - With OpenEXR encoder, only 32-bit float (CV_32F) images can be saved.
+.     - 8-bit unsigned (CV_8U) images are not supported.
+.   - With Radiance HDR encoder, non 64-bit float (CV_64F) images can be saved.
+.     - All images will be converted to 32-bit float (CV_32F).
+.   - With JPEG 2000 encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.
+.   - With PAM encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.
+.   - With PNG encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.
+.     - PNG images with an alpha channel can be saved using this function. To do this, create
+.       8-bit (or 16-bit) 4-channel image BGRA, where the alpha channel goes last. Fully transparent pixels
+.       should have alpha set to 0, fully opaque pixels should have alpha set to 255/65535 (see the code sample below).
+.   - With PGM/PPM encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.
+.   - With TIFF encoder, 8-bit unsigned (CV_8U), 16-bit unsigned (CV_16U),
+.                        32-bit float (CV_32F) and 64-bit float (CV_64F) images can be saved.
+.     - Multiple images (vector of Mat) can be saved in TIFF format (see the code sample below).
+.     - 32-bit float 3-channel (CV_32FC3) TIFF images will be saved
+.       using the LogLuv high dynamic range encoding (4 bytes per pixel)
+.   
+.   If the image format is not supported, the image will be converted to 8-bit unsigned (CV_8U) and saved that way.
+.   
+.   If the format, depth or channel order is different, use
+.   Mat::convertTo and cv::cvtColor to convert it before saving. Or, use the universal FileStorage I/O
+.   functions to save the image to XML or YAML format.
+.   
+.   The sample below shows how to create a BGRA image, how to set custom compression parameters and save it to a PNG file.
+.   It also demonstrates how to save multiple images in a TIFF file:
+.   &#64;include snippets/imgcodecs_imwrite.cpp
+.   &#64;param filename Name of the file.
+.   &#64;param img (Mat or vector of Mat) Image or Images to be saved.
+.   &#64;param params Format-specific parameters encoded as pairs (paramId_1, paramValue_1, paramId_2, paramValue_2, … .) see cv::ImwriteFlags</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.inverse_register_image">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">inverse_register_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#inverse_register_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.inverse_register_image" title="Link to this definition">¶</a></dt>
+<dd><p>Inverse register the given image to match the new width and height with transformation given by the source and destination points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – The image to be registered.</p></li>
+<li><p><strong>new_width</strong> – The new width of the image.</p></li>
+<li><p><strong>new_height</strong> – The new height of the image.</p></li>
+<li><p><strong>points_source</strong> – The source points.</p></li>
+<li><p><strong>points_destination</strong> – The destination points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The inverse registered image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.load_image_toregister">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">load_image_toregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_image_toregister</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#load_image_toregister"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.load_image_toregister" title="Link to this definition">¶</a></dt>
+<dd><p>Loads an image from the specified path. Preserves the alpha channel of .png files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path_image_toregister</strong> – Path of the image to be loaded for registering.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A MatLike representation of the image. If the image cannot be read, it returns None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.load_points">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">load_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_points_csv_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#load_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.load_points" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the control points for the transformation from a CSV file, as generated by the
+butterfly_registrator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path_points_csv_file</strong> – Path of the csv file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing a numpy array with the source points at index 0 and a</p>
+</dd>
+</dl>
+<p>numpy array with the destination points at index 1.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.load_points_dict">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">load_points_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_points_csv_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#load_points_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.load_points_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the control points for the transformation from a CSV file, as generated by the
+butterfly_registrator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path_points_csv_file</strong> – Path of the csv file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dict containing the registration points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.pad_image_to_match_size">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">pad_image_to_match_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_to_pad</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_reference_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_reference_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#pad_image_to_match_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.pad_image_to_match_size" title="Link to this definition">¶</a></dt>
+<dd><p>Pads the image or removes padding to match the size of the reference image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_to_pad</strong> – A MatLike representation of the image to be padded.</p></li>
+<li><p><strong>image_reference_height</strong> – The height of the reference image.</p></li>
+<li><p><strong>image_reference_width</strong> – The width of the reference image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A MatLike representation of the padded image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.register_image">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">register_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#register_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.register_image" title="Link to this definition">¶</a></dt>
+<dd><p>Register the given image to match the new width and height with transformation given by the source and destination points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> – The image to be registered.</p></li>
+<li><p><strong>new_width</strong> – The new width of the image.</p></li>
+<li><p><strong>new_height</strong> – The new height of the image.</p></li>
+<li><p><strong>points_source</strong> – The source points.</p></li>
+<li><p><strong>points_destination</strong> – The destination points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The registered image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.register_image_to_image">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">register_image_to_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_image_reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_image_register</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_csv_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_result_registered_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#register_image_to_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.register_image_to_image" title="Link to this definition">¶</a></dt>
+<dd><p>Registers an image to align with a reference image by resizing, padding, and applying
+perspective transformation. It uses control points from a CSV, generated by the butterfly_registrator,
+to apply the perspective transformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_image_reference</strong> – The path of the reference image.</p></li>
+<li><p><strong>path_image_register</strong> – The path of the image to be registered.</p></li>
+<li><p><strong>path_csv_points</strong> – The path of the .csv file.</p></li>
+<li><p><strong>path_result_registered_image</strong> – The path where the registered image will be uploaded to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the registered image has been written to the specified path successfully and false otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.resize">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">fx</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">fy</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">interpolation</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dst</span></span></span><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.resize" title="Link to this definition">¶</a></dt>
+<dd><p>.   &#64;brief Resizes an image.
+.   
+.   The function resize resizes the image src down to or up to the specified size. Note that the
+.   initial dst type or size are not taken into account. Instead, the size and type are derived from
+.   the <cite>src</cite>,`dsize`,`fx`, and <cite>fy</cite>. If you want to resize src so that it fits the pre-created dst,
+.   you may call the function as follows:
+.   &#64;code
+.       // explicitly specify dsize=dst.size(); fx and fy will be computed from that.
+.       resize(src, dst, dst.size(), 0, 0, interpolation);
+.   &#64;endcode
+.   If you want to decimate the image by factor of 2 in each direction, you can call the function this
+.   way:
+.   &#64;code
+.       // specify fx and fy and let the function compute the destination image size.
+.       resize(src, dst, Size(), 0.5, 0.5, interpolation);
+.   &#64;endcode
+.   To shrink an image, it will generally look best with #INTER_AREA interpolation, whereas to
+.   enlarge an image, it will generally look best with #INTER_CUBIC (slow) or #INTER_LINEAR
+.   (faster but still looks OK).
+.   
+.   &#64;param src input image.
+.   &#64;param dst output image; it has the size dsize (when it is non-zero) or the size computed from
+.   src.size(), fx, and fy; the type of dst is the same as of src.
+.   &#64;param dsize output image size; if it equals zero (<cite>None</cite> in Python), it is computed as:
+.    f[texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}f]
+.    Either dsize or both fx and fy must be non-zero.
+.   &#64;param fx scale factor along the horizontal axis; when it equals 0, it is computed as
+.   f[texttt{(double)dsize.width/src.cols}f]
+.   &#64;param fy scale factor along the vertical axis; when it equals 0, it is computed as
+.   f[texttt{(double)dsize.height/src.rows}f]
+.   &#64;param interpolation interpolation method, see #InterpolationFlags
+.   
+.   &#64;sa  warpAffine, warpPerspective, remap</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.resize_image_fit_aspect_ratio">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">resize_image_fit_aspect_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_resize</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_reference_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_reference_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_register/register_image.html#resize_image_fit_aspect_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.resize_image_fit_aspect_ratio" title="Link to this definition">¶</a></dt>
+<dd><p>Resizes an image to the aspect ratio calculated by the reference image width
+and height (image_reference_width, image_reference_height).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_resize</strong> – A MatLike representation of the image to be resized.</p></li>
+<li><p><strong>image_reference_height</strong> – The height of the reference image (in number of pixels).</p></li>
+<li><p><strong>image_reference_width</strong> – The width of the reference image (in number of pixels).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A MatLike representation of the resized image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_register.register_image.warpPerspective">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_register.register_image.</span></span><span class="sig-name descname"><span class="pre">warpPerspective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsize</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">borderMode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">borderValue</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dst</span></span></span><a class="headerlink" href="#xrf_explorer.server.image_register.register_image.warpPerspective" title="Link to this definition">¶</a></dt>
+<dd><p>.   &#64;brief Applies a perspective transformation to an image.
+.   
+.   The function warpPerspective transforms the source image using the specified matrix:
+.   
+.   f[texttt{dst} (x,y) =  texttt{src} left ( frac{M_{11} x + M_{12} y + M_{13}}{M_{31} x + M_{32} y + M_{33}} ,
+.        frac{M_{21} x + M_{22} y + M_{23}}{M_{31} x + M_{32} y + M_{33}} right )f]
+.   
+.   when the flag #WARP_INVERSE_MAP is set. Otherwise, the transformation is first inverted with invert
+.   and then put in the formula above instead of M. The function cannot operate in-place.
+.   
+.   &#64;param src input image.
+.   &#64;param dst output image that has the size dsize and the same type as src .
+.   &#64;param M f$3times 3f$ transformation matrix.
+.   &#64;param dsize size of the output image.
+.   &#64;param flags combination of interpolation methods (#INTER_LINEAR or #INTER_NEAREST) and the
+.   optional flag #WARP_INVERSE_MAP, that sets M as the inverse transformation (
+.   f$texttt{dst}rightarrowtexttt{src}f$ ).
+.   &#64;param borderMode pixel extrapolation method (#BORDER_CONSTANT or #BORDER_REPLICATE).
+.   &#64;param borderValue value used in case of a constant border; by default, it equals 0.
+.   
+.   &#64;sa  warpAffine, resize, remap, getRectSubPix, perspectiveTransform</p>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.image_register">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-xrf_explorer.server.image_register" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -355,8 +705,25 @@
             <ul>
 <li><a class="reference internal" href="#">xrf_explorer.server.image_register package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-image-register-register-image-module">xrf_explorer.server.image_register.register_image module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.image_register.register_image">xrf_explorer.server.image_register.register_image module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.apply_perspective_transformation"><code class="docutils literal notranslate"><span class="pre">apply_perspective_transformation()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.getPerspectiveTransform"><code class="docutils literal notranslate"><span class="pre">getPerspectiveTransform()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.get_image_registered_to_data_cube"><code class="docutils literal notranslate"><span class="pre">get_image_registered_to_data_cube()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.imread"><code class="docutils literal notranslate"><span class="pre">imread()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.imwrite"><code class="docutils literal notranslate"><span class="pre">imwrite()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.inverse_register_image"><code class="docutils literal notranslate"><span class="pre">inverse_register_image()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.load_image_toregister"><code class="docutils literal notranslate"><span class="pre">load_image_toregister()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.load_points"><code class="docutils literal notranslate"><span class="pre">load_points()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.load_points_dict"><code class="docutils literal notranslate"><span class="pre">load_points_dict()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.pad_image_to_match_size"><code class="docutils literal notranslate"><span class="pre">pad_image_to_match_size()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.register_image"><code class="docutils literal notranslate"><span class="pre">register_image()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.register_image_to_image"><code class="docutils literal notranslate"><span class="pre">register_image_to_image()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.resize"><code class="docutils literal notranslate"><span class="pre">resize()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.resize_image_fit_aspect_ratio"><code class="docutils literal notranslate"><span class="pre">resize_image_fit_aspect_ratio()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_register.register_image.warpPerspective"><code class="docutils literal notranslate"><span class="pre">warpPerspective()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.image_register">Module contents</a></li>
 </ul>
 </li>
 </ul>

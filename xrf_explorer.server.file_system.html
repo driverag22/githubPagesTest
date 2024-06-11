@@ -290,32 +290,624 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="xrf-explorer-server-file-system-config-handler-module">
-<h2>xrf_explorer.server.file_system.config_handler module<a class="headerlink" href="#xrf-explorer-server-file-system-config-handler-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.config_handler">
+<span id="xrf-explorer-server-file-system-config-handler-module"></span><h2>xrf_explorer.server.file_system.config_handler module<a class="headerlink" href="#module-xrf_explorer.server.file_system.config_handler" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.config_handler.get_config">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.config_handler.</span></span><span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/config_handler.html#get_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.config_handler.get_config" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the set configuration for the backend.
+:return: A dictionary containing the configuration for the backend.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.config_handler.set_config">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.config_handler.</span></span><span class="sig-name descname"><span class="pre">set_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/config_handler.html#set_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.config_handler.set_config" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the global configuration for the backend.
+:param path: The path to the configuration file.
+:return: True if the configuration file was successfully loaded.</p>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-contextual-images-module">
-<h2>xrf_explorer.server.file_system.contextual_images module<a class="headerlink" href="#xrf-explorer-server-file-system-contextual-images-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.contextual_images">
+<span id="xrf-explorer-server-file-system-contextual-images-module"></span><h2>xrf_explorer.server.file_system.contextual_images module<a class="headerlink" href="#module-xrf_explorer.server.file_system.contextual_images" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_base_image_name">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_base_image_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_base_image_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_base_image_name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the name to the base image of the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source</strong> – The data source to get the base image from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the base image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_contextual_image">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_contextual_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Image</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_contextual_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image" title="Link to this definition">¶</a></dt>
+<dd><p>Open and returns an image at a specified path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image_path</strong> – The path to the image file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_contextual_image_data">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_contextual_image_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_contextual_image_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_data" title="Link to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Returns a contextual image from workspace.json. Returns None if the image or data_source does not exist.
+:param data_source: The data source to fetch the image from.
+:param name: The name of the image. Must be present in workspace.json for the data source as the base image or a</p>
+</div></blockquote>
+<dl class="simple">
+<dt>contextual image.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict containing the name, imageLocation and recipeLocation of a contextual image.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_contextual_image_path">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_contextual_image_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_contextual_image_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_path" title="Link to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Returns the path of the requested contextual image. If no file is found, it will return None. This will</p>
+</div></blockquote>
+<dl class="simple">
+<dt>also happen if the config file is empty.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param data_source<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data source to fetch the image from.</p>
+</dd>
+<dt class="field-even">param name<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the image. Must be present in workspace.json for the data source as the base image or a</p>
+</dd>
+</dl>
+</dd>
+<dt>contextual image.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The path to the file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_contextual_image_recipe_path">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_contextual_image_recipe_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_contextual_image_recipe_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_recipe_path" title="Link to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Returns the path of the registering recipe of the requested contextual image. If no file is found, it will return</p>
+</div></blockquote>
+<dl class="simple">
+<dt>None. This will also happen if the config file is empty.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param data_source<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The data source to fetch the image from.</p>
+</dd>
+<dt class="field-even">param name<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the image. Must be present in workspace.json for the data source as the base image or a</p>
+</dd>
+</dl>
+</dd>
+<dt>contextual image.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The path to the file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_contextual_image_size">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_contextual_image_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_contextual_image_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_size" title="Link to this definition">¶</a></dt>
+<dd><p>Get the size of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image_path</strong> – The path to the image file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The dimensions of the image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.get_path_to_base_image">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">get_path_to_base_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#get_path_to_base_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.get_path_to_base_image" title="Link to this definition">¶</a></dt>
+<dd><p>Get the path to the base image of the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source</strong> – The data source to get the base image from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The path to the base image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.contextual_images.is_base_image">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.contextual_images.</span></span><span class="sig-name descname"><span class="pre">is_base_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/contextual_images.html#is_base_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.contextual_images.is_base_image" title="Link to this definition">¶</a></dt>
+<dd><p>Check if the image is the base image of the data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source</strong> – The data source to check whether the name is the base image.</p></li>
+<li><p><strong>name</strong> – The name of the image. Must be present in workspace.json for the data source as the base image or a contextual image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the image is the base image, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-data-listing-module">
-<h2>xrf_explorer.server.file_system.data_listing module<a class="headerlink" href="#xrf-explorer-server-file-system-data-listing-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.data_listing">
+<span id="xrf-explorer-server-file-system-data-listing-module"></span><h2>xrf_explorer.server.file_system.data_listing module<a class="headerlink" href="#module-xrf_explorer.server.file_system.data_listing" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.data_listing.get_data_source_files">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.data_listing.</span></span><span class="sig-name descname"><span class="pre">get_data_source_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/data_listing.html#get_data_source_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.data_listing.get_data_source_files" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list of all the files stored in the folder belonging to a data source.
+Does not look at files in subdirectories.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source</strong> – name of the data source</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of all files stored in the folder belonging to a data source</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.data_listing.get_data_sources_names">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.data_listing.</span></span><span class="sig-name descname"><span class="pre">get_data_sources_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/data_listing.html#get_data_sources_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.data_listing.get_data_sources_names" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list of all available data sources stored in the data folder on 
+the remote server as specified in the project’s configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of all data source names stored in the folder on the server</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-elemental-cube-module">
-<h2>xrf_explorer.server.file_system.elemental_cube module<a class="headerlink" href="#xrf-explorer-server-file-system-elemental-cube-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.elemental_cube">
+<span id="xrf-explorer-server-file-system-elemental-cube-module"></span><h2>xrf_explorer.server.file_system.elemental_cube module<a class="headerlink" href="#module-xrf_explorer.server.file_system.elemental_cube" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.get_element_averages">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">get_element_averages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#get_element_averages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.get_element_averages" title="Link to this definition">¶</a></dt>
+<dd><p>Get the names and averages of the elements present in the painting.
+:param path: Path to data cube.
+:return: List of the names and average composition of the elements.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.get_element_names">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">get_element_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#get_element_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.get_element_names" title="Link to this definition">¶</a></dt>
+<dd><p>Get the names of the elements stored in the elemental data cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of the names of the elements. Empty list if error occurred.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.get_elemental_data_cube">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">get_elemental_data_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#get_elemental_data_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.get_elemental_data_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Get the elemental data cube at the given path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>3-dimensional numpy array containing the elemental data cube. First dimension is channel, and last two for x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.get_elemental_map">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">get_elemental_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#get_elemental_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.get_elemental_map" title="Link to this definition">¶</a></dt>
+<dd><p>Get the elemental map of element index at the given path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – Index of the element in the elemental data cube.</p></li>
+<li><p><strong>path</strong> – Path to data cube.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>2-dimensional numpy array containing the elemental data cube. Dimensions are the x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.get_short_element_names">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">get_short_element_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#get_short_element_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.get_short_element_names" title="Link to this definition">¶</a></dt>
+<dd><p>Get the short names of the elements stored in the elemental data cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of the names of the elements. Empty list if error occurred.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.normalize_elemental_cube_per_layer">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">normalize_elemental_cube_per_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#normalize_elemental_cube_per_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.normalize_elemental_cube_per_layer" title="Link to this definition">¶</a></dt>
+<dd><p>Normalize the raw elemental data cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>raw_cube</strong> – 3-dimensional numpy array containing the normalized elemental data. First dimension is channel, and last two for x, y coordinates.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>3-dimensional numpy array containing the normalized elemental data. First dimension is channel, and last two for x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.normalize_ndarray_to_grayscale">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">normalize_ndarray_to_grayscale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#normalize_ndarray_to_grayscale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.normalize_ndarray_to_grayscale" title="Link to this definition">¶</a></dt>
+<dd><p>Map all values in the given array to the interval [0, 255].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array</strong> – n-dimensional numpy array.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a copy of the array with values mapped to the interval [0, 255].</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.elemental_cube.to_dms">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.elemental_cube.</span></span><span class="sig-name descname"><span class="pre">to_dms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/elemental_cube.html#to_dms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.elemental_cube.to_dms" title="Link to this definition">¶</a></dt>
+<dd><p>“Saves a numpy array and list of elements to a DMS file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name_cube</strong> – Name of the elemental data cube. Without file extension, e.g. ‘cube’.</p></li>
+<li><p><strong>cube</strong> – 3-dimensional numpy array containing the elemental data cube. First dimension is channel, and last two for x, y coordinates.</p></li>
+<li><p><strong>elements</strong> – List of the names of the elements.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the cube was saved successfully, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-file-access-module">
-<h2>xrf_explorer.server.file_system.file_access module<a class="headerlink" href="#xrf-explorer-server-file-system-file-access-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.file_access">
+<span id="xrf-explorer-server-file-system-file-access-module"></span><h2>xrf_explorer.server.file_system.file_access module<a class="headerlink" href="#module-xrf_explorer.server.file_system.file_access" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_base_image_name">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_base_image_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_base_image_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_base_image_name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the name of the rgb image of a given data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source_folder_name</strong> – Name of the data source folder.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Name of the rgb image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_base_image_path">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_base_image_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_base_image_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_base_image_path" title="Link to this definition">¶</a></dt>
+<dd><p>Get the path to rgb image of a data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source_folder_name</strong> – Name of the data source folder.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path to the rgb image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_cube_recipe_path">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_cube_recipe_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_cube_recipe_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_cube_recipe_path" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the path of the data cube recipe of the specified data source. If the data cube does
+not have a recipe, the function returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source_folder_name</strong> – Name of the data source folder.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path of the data cube recipe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_elemental_cube_name">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_elemental_cube_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_elemental_cube_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_elemental_cube_name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the name of the elemental cube file of a given datasource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source_folder</strong> – Name of the data source folder.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Name of the elemental cube file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_elemental_cube_path">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_elemental_cube_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_elemental_cube_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_elemental_cube_path" title="Link to this definition">¶</a></dt>
+<dd><p>Get the path to the elemental data cube of a data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source_folder</strong> – Name of the data source folder.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path to the elemental data cube.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_elemental_cube_recipe_path">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_elemental_cube_recipe_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_elemental_cube_recipe_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_elemental_cube_recipe_path" title="Link to this definition">¶</a></dt>
+<dd><p>Get the location of the elemental cube recipe file of a given datasource</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source</strong> – Name of the datasource.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path string pointing to the recipe of the elemental cube.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_raw_rpl_names">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_raw_rpl_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_raw_rpl_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_raw_rpl_names" title="Link to this definition">¶</a></dt>
+<dd><p>Get the name of the raw data file (.raw) and the .rpl file of a given datasource</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source</strong> – Name of the data source.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Names of the raw data and rpl files.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_raw_rpl_paths">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_raw_rpl_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_raw_rpl_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_raw_rpl_paths" title="Link to this definition">¶</a></dt>
+<dd><p>Get the paths to the raw data file (.raw) and the .rpl file of a given datasource</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source</strong> – Name of the data source.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Paths to the raw data and rpl files.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.get_workspace_dict">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">get_workspace_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#get_workspace_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.get_workspace_dict" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the workspace of the specified data source in dictionary format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_source_folder_name</strong> – Name of the data source folder.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary format of the workspace.json</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.file_access.parse_rpl">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.file_access.</span></span><span class="sig-name descname"><span class="pre">parse_rpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/file_access.html#parse_rpl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.file_access.parse_rpl" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Parse the rpl file of a data source as a dictionary, containing the following info:</dt><dd><ul class="simple">
+<li><p>width</p></li>
+<li><p>height</p></li>
+<li><p>depth</p></li>
+<li><p>offset</p></li>
+<li><p>data length</p></li>
+<li><p>data type</p></li>
+<li><p>byte order</p></li>
+<li><p>record by</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – path to the rpl file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing the attributes’ name and value</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-from-csv-module">
-<h2>xrf_explorer.server.file_system.from_csv module<a class="headerlink" href="#xrf-explorer-server-file-system-from-csv-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.from_csv">
+<span id="xrf-explorer-server-file-system-from-csv-module"></span><h2>xrf_explorer.server.file_system.from_csv module<a class="headerlink" href="#module-xrf_explorer.server.file_system.from_csv" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_csv.get_elements_from_csv">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_csv.</span></span><span class="sig-name descname"><span class="pre">get_elements_from_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_csv.html#get_elements_from_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_csv.get_elements_from_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Get the names of the elements stored in the elemental data cube.
+Can raise error if file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to the csv file containing the elemental data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of the names of the elements.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_csv.get_raw_elemental_data_cube_from_csv">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_csv.</span></span><span class="sig-name descname"><span class="pre">get_raw_elemental_data_cube_from_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_csv.html#get_raw_elemental_data_cube_from_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_csv.get_raw_elemental_data_cube_from_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Get the elemental data cube from the csv file at the given path.
+Can raise error if file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to the csv file containing the elemental data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>3-dimensional numpy array containing the elemental data cube. First dimension is channel, and last two for x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_csv.get_raw_elemental_map_from_csv">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_csv.</span></span><span class="sig-name descname"><span class="pre">get_raw_elemental_map_from_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_csv.html#get_raw_elemental_map_from_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_csv.get_raw_elemental_map_from_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Get the elemental map of the given element from the csv file.
+Can raise error if file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – Index of the element in the elemental data cube.</p></li>
+<li><p><strong>path</strong> – Path to the dms file containing the elemental data cube.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>2-dimensional numpy array containing the elemental map. Dimensions are the x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-from-dms-module">
-<h2>xrf_explorer.server.file_system.from_dms module<a class="headerlink" href="#xrf-explorer-server-file-system-from-dms-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.from_dms">
+<span id="xrf-explorer-server-file-system-from-dms-module"></span><h2>xrf_explorer.server.file_system.from_dms module<a class="headerlink" href="#module-xrf_explorer.server.file_system.from_dms" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_dms.get_elemental_datacube_dimensions_from_dms">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_dms.</span></span><span class="sig-name descname"><span class="pre">get_elemental_datacube_dimensions_from_dms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_dms.html#get_elemental_datacube_dimensions_from_dms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_dms.get_elemental_datacube_dimensions_from_dms" title="Link to this definition">¶</a></dt>
+<dd><p>Get the dimensions of the elemental datacube. Error can be raised if
+file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to the raw data file in the server.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>4-tuple of the dimensions of the raw elemental data and the header size (in bytes). Tuple is as follows (width, height, channels, header size)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_dms.get_elements_from_dms">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_dms.</span></span><span class="sig-name descname"><span class="pre">get_elements_from_dms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_dms.html#get_elements_from_dms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_dms.get_elements_from_dms" title="Link to this definition">¶</a></dt>
+<dd><p>Get the names of the elements stored in the elemental data cube.
+Can raise error if file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to the dms file containing the elemental data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of the names of the elements.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_dms.get_raw_elemental_data_cube_from_dms">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_dms.</span></span><span class="sig-name descname"><span class="pre">get_raw_elemental_data_cube_from_dms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_dms.html#get_raw_elemental_data_cube_from_dms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_dms.get_raw_elemental_data_cube_from_dms" title="Link to this definition">¶</a></dt>
+<dd><p>Get the elemental data cube from the dms file.
+Can raise error if file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – Path to the dms file containing the elemental data cube.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>3-dimensional numpy array containing the elemental data cube. First dimension is channel, and last two for x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.from_dms.get_raw_elemental_map_from_dms">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.from_dms.</span></span><span class="sig-name descname"><span class="pre">get_raw_elemental_map_from_dms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/from_dms.html#get_raw_elemental_map_from_dms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.from_dms.get_raw_elemental_map_from_dms" title="Link to this definition">¶</a></dt>
+<dd><p>Get the elemental map of the given element from the dms file.
+Can raise error if file could not be read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – Index of the element in the elemental data cube.</p></li>
+<li><p><strong>path</strong> – Path to the dms file containing the elemental data cube.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>2-dimensional numpy array containing the elemental map. Dimensions are the x, y coordinates.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="xrf-explorer-server-file-system-workspace-handler-module">
-<h2>xrf_explorer.server.file_system.workspace_handler module<a class="headerlink" href="#xrf-explorer-server-file-system-workspace-handler-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system.workspace_handler">
+<span id="xrf-explorer-server-file-system-workspace-handler-module"></span><h2>xrf_explorer.server.file_system.workspace_handler module<a class="headerlink" href="#module-xrf_explorer.server.file_system.workspace_handler" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.workspace_handler.get_path_to_workspace">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.workspace_handler.</span></span><span class="sig-name descname"><span class="pre">get_path_to_workspace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/workspace_handler.html#get_path_to_workspace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.workspace_handler.get_path_to_workspace" title="Link to this definition">¶</a></dt>
+<dd><p>Get the path to the workspace.json file for a given datasource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datasource</strong> – The name of the datasource</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The path to the workspace.json file for the given datasource. If the workspace does not exist, return an empty string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.file_system.workspace_handler.update_workspace">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.file_system.workspace_handler.</span></span><span class="sig-name descname"><span class="pre">update_workspace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_workspace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/file_system/workspace_handler.html#update_workspace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.file_system.workspace_handler.update_workspace" title="Link to this definition">¶</a></dt>
+<dd><p>Update the workspace.json file for a given datasource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datasource</strong> – The name of the datasource</p></li>
+<li><p><strong>new_workspace</strong> – The data to write to the workspace</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the workspace was updated successfully, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.file_system">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-xrf_explorer.server.file_system" title="Link to this heading">¶</a></h2>
+<p>This module handles everything related to routing, storing, or extracting files in the backend of the application.</p>
 </section>
 </section>
 
@@ -376,15 +968,70 @@
             <ul>
 <li><a class="reference internal" href="#">xrf_explorer.server.file_system package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-config-handler-module">xrf_explorer.server.file_system.config_handler module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-contextual-images-module">xrf_explorer.server.file_system.contextual_images module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-data-listing-module">xrf_explorer.server.file_system.data_listing module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-elemental-cube-module">xrf_explorer.server.file_system.elemental_cube module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-file-access-module">xrf_explorer.server.file_system.file_access module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-from-csv-module">xrf_explorer.server.file_system.from_csv module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-from-dms-module">xrf_explorer.server.file_system.from_dms module</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-file-system-workspace-handler-module">xrf_explorer.server.file_system.workspace_handler module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.config_handler">xrf_explorer.server.file_system.config_handler module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.config_handler.get_config"><code class="docutils literal notranslate"><span class="pre">get_config()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.config_handler.set_config"><code class="docutils literal notranslate"><span class="pre">set_config()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.contextual_images">xrf_explorer.server.file_system.contextual_images module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_base_image_name"><code class="docutils literal notranslate"><span class="pre">get_base_image_name()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image"><code class="docutils literal notranslate"><span class="pre">get_contextual_image()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_data"><code class="docutils literal notranslate"><span class="pre">get_contextual_image_data()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_path"><code class="docutils literal notranslate"><span class="pre">get_contextual_image_path()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_recipe_path"><code class="docutils literal notranslate"><span class="pre">get_contextual_image_recipe_path()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_contextual_image_size"><code class="docutils literal notranslate"><span class="pre">get_contextual_image_size()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.get_path_to_base_image"><code class="docutils literal notranslate"><span class="pre">get_path_to_base_image()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.contextual_images.is_base_image"><code class="docutils literal notranslate"><span class="pre">is_base_image()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.data_listing">xrf_explorer.server.file_system.data_listing module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.data_listing.get_data_source_files"><code class="docutils literal notranslate"><span class="pre">get_data_source_files()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.data_listing.get_data_sources_names"><code class="docutils literal notranslate"><span class="pre">get_data_sources_names()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.elemental_cube">xrf_explorer.server.file_system.elemental_cube module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.get_element_averages"><code class="docutils literal notranslate"><span class="pre">get_element_averages()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.get_element_names"><code class="docutils literal notranslate"><span class="pre">get_element_names()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.get_elemental_data_cube"><code class="docutils literal notranslate"><span class="pre">get_elemental_data_cube()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.get_elemental_map"><code class="docutils literal notranslate"><span class="pre">get_elemental_map()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.get_short_element_names"><code class="docutils literal notranslate"><span class="pre">get_short_element_names()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.normalize_elemental_cube_per_layer"><code class="docutils literal notranslate"><span class="pre">normalize_elemental_cube_per_layer()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.normalize_ndarray_to_grayscale"><code class="docutils literal notranslate"><span class="pre">normalize_ndarray_to_grayscale()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.elemental_cube.to_dms"><code class="docutils literal notranslate"><span class="pre">to_dms()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.file_access">xrf_explorer.server.file_system.file_access module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_base_image_name"><code class="docutils literal notranslate"><span class="pre">get_base_image_name()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_base_image_path"><code class="docutils literal notranslate"><span class="pre">get_base_image_path()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_cube_recipe_path"><code class="docutils literal notranslate"><span class="pre">get_cube_recipe_path()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_elemental_cube_name"><code class="docutils literal notranslate"><span class="pre">get_elemental_cube_name()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_elemental_cube_path"><code class="docutils literal notranslate"><span class="pre">get_elemental_cube_path()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_elemental_cube_recipe_path"><code class="docutils literal notranslate"><span class="pre">get_elemental_cube_recipe_path()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_raw_rpl_names"><code class="docutils literal notranslate"><span class="pre">get_raw_rpl_names()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_raw_rpl_paths"><code class="docutils literal notranslate"><span class="pre">get_raw_rpl_paths()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.get_workspace_dict"><code class="docutils literal notranslate"><span class="pre">get_workspace_dict()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.file_access.parse_rpl"><code class="docutils literal notranslate"><span class="pre">parse_rpl()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.from_csv">xrf_explorer.server.file_system.from_csv module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_csv.get_elements_from_csv"><code class="docutils literal notranslate"><span class="pre">get_elements_from_csv()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_csv.get_raw_elemental_data_cube_from_csv"><code class="docutils literal notranslate"><span class="pre">get_raw_elemental_data_cube_from_csv()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_csv.get_raw_elemental_map_from_csv"><code class="docutils literal notranslate"><span class="pre">get_raw_elemental_map_from_csv()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.from_dms">xrf_explorer.server.file_system.from_dms module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_dms.get_elemental_datacube_dimensions_from_dms"><code class="docutils literal notranslate"><span class="pre">get_elemental_datacube_dimensions_from_dms()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_dms.get_elements_from_dms"><code class="docutils literal notranslate"><span class="pre">get_elements_from_dms()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_dms.get_raw_elemental_data_cube_from_dms"><code class="docutils literal notranslate"><span class="pre">get_raw_elemental_data_cube_from_dms()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.from_dms.get_raw_elemental_map_from_dms"><code class="docutils literal notranslate"><span class="pre">get_raw_elemental_map_from_dms()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system.workspace_handler">xrf_explorer.server.file_system.workspace_handler module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.workspace_handler.get_path_to_workspace"><code class="docutils literal notranslate"><span class="pre">get_path_to_workspace()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.file_system.workspace_handler.update_workspace"><code class="docutils literal notranslate"><span class="pre">update_workspace()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.file_system">Module contents</a></li>
 </ul>
 </li>
 </ul>

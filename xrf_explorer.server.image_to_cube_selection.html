@@ -290,11 +290,126 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="xrf-explorer-server-image-to-cube-selection-image-to-cube-selection-module">
-<h2>xrf_explorer.server.image_to_cube_selection.image_to_cube_selection module<a class="headerlink" href="#xrf-explorer-server-image-to-cube-selection-image-to-cube-selection-module" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.image_to_cube_selection.image_to_cube_selection">
+<span id="xrf-explorer-server-image-to-cube-selection-image-to-cube-selection-module"></span><h2>xrf_explorer.server.image_to_cube_selection.image_to_cube_selection module<a class="headerlink" href="#module-xrf_explorer.server.image_to_cube_selection.image_to_cube_selection" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.extract_selected_data">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.</span></span><span class="sig-name descname"><span class="pre">extract_selected_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_cube</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_to_cube_selection/image_to_cube_selection.html#extract_selected_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.extract_selected_data" title="Link to this definition">¶</a></dt>
+<dd><p>Extracts elements from a 3D data cube at positions specified by a 2D boolean mask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_cube</strong> – The 3D data cube from which data will be extracted.</p></li>
+<li><p><strong>mask</strong> – A 2D boolean array where True indicates the position to be extracted</p></li>
+</ul>
+</dd>
+</dl>
+<p>from the last 2 dimensions of data_cube.
+:return: A 2D array where the rows represent pixels in the data cube image
+and the columns represent their elemental map values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.get_scaled_cube_coordinates">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.</span></span><span class="sig-name descname"><span class="pre">get_scaled_cube_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selection_coord_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_coord_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_img_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_img_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cube_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cube_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_to_cube_selection/image_to_cube_selection.html#get_scaled_cube_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.get_scaled_cube_coordinates" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates and returns the coordinates of a rectangular region within the data cube, scaled from the coordinates of a base image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>selection_coord_1</strong> – The first coordinate tuple (x1, y1), representing</p>
+</dd>
+</dl>
+<p>one corner of the rectangular region in the base image.
+:param selection_coord_2: The second coordinate tuple (x2, y2), representing
+the opposite corner of the rectangular region in the base image.
+:param base_img_width: The width of the base image in pixels.
+:param base_img_height: The height of the base image in pixels.
+:param cube_width: The width of the cube.
+:param cube_height: The height of the cube.
+:return: A tuple containing two tuples, representing the scaled coordinates.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.get_selected_data_cube">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.</span></span><span class="sig-name descname"><span class="pre">get_selected_data_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_source_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_coord_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_coord_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/xrf_explorer/server/image_to_cube_selection/image_to_cube_selection.html#get_selected_data_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.get_selected_data_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Extracts and returns a 2D representation of a data cube region, based on the rectangular selection coordinates
+on the base image. If the specified data source contains a recipe for the data cube, the selection made on the
+base image is “deregistered” so that the returned data from the function correctly represents the selected
+pixels on the image. If the data cube does not have a recipe, the selection made on the base image is simply
+scaled to match the data cube’s dimensions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_source_folder</strong> – The data source folder name.</p></li>
+<li><p><strong>selection_coord_1</strong> – The first coordinate tuple (x1, y1), representing one corner of the rectangular</p></li>
+</ul>
+</dd>
+</dl>
+<p>region in the base image.
+:param selection_coord_2: The second coordinate tuple (x2, y2), representing the opposite corner of the
+rectangular region in the base image.
+:return: A 2D array where the rows represent the selected pixels from the data cube image and the columns
+represent their elemental map values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.imread">
+<span class="sig-prename descclassname"><span class="pre">xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.</span></span><span class="sig-name descname"><span class="pre">imread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span></span></span><a class="headerlink" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.imread" title="Link to this definition">¶</a></dt>
+<dd><p>.   &#64;brief Loads an image from a file.
+.   
+.   &#64;anchor imread
+.   
+.   The function imread loads an image from the specified file and returns it. If the image cannot be
+.   read (because of missing file, improper permissions, unsupported or invalid format), the function
+.   returns an empty matrix ( Mat::data==NULL ).
+.   
+.   Currently, the following file formats are supported:
+.   
+.   -   Windows bitmaps - *.bmp, *.dib (always supported)
+.   -   JPEG files - *.jpeg, *.jpg, *.jpe (see the <em>Note</em> section)
+.   -   JPEG 2000 files - *.jp2 (see the <em>Note</em> section)
+.   -   Portable Network Graphics - *.png (see the <em>Note</em> section)
+.   -   WebP - *.webp (see the <em>Note</em> section)
+.   -   AVIF - *.avif (see the <em>Note</em> section)
+.   -   Portable image format - *.pbm, *.pgm, *.ppm *.pxm, *.pnm (always supported)
+.   -   PFM files - *.pfm (see the <em>Note</em> section)
+.   -   Sun rasters - *.sr, *.ras (always supported)
+.   -   TIFF files - *.tiff, *.tif (see the <em>Note</em> section)
+.   -   OpenEXR Image files - *.exr (see the <em>Note</em> section)
+.   -   Radiance HDR - *.hdr, *.pic (always supported)
+.   -   Raster and Vector geospatial data supported by GDAL (see the <em>Note</em> section)
+.   
+.   &#64;note
+.   -   The function determines the type of an image by the content, not by the file extension.
+.   -   In the case of color images, the decoded images will have the channels stored in <strong>B G R</strong> order.
+.   -   When using IMREAD_GRAYSCALE, the codec’s internal grayscale conversion will be used, if available.
+.       Results may differ to the output of cvtColor()
+.   -   On Microsoft Windows* OS and MacOSX*, the codecs shipped with an OpenCV image (libjpeg,
+.       libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,
+.       and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware
+.       that currently these native image loaders give images with different pixel values because of
+.       the color management embedded into MacOSX.
+.   -   On Linux*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for
+.       codecs supplied with an OS image. Install the relevant packages (do not forget the development
+.       files, for example, “libjpeg-dev”, in Debian* and Ubuntu*) to get the codec support or turn
+.       on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.
+.   -   In the case you set <em>WITH_GDAL</em> flag to true in CMake and &#64;ref IMREAD_LOAD_GDAL to load the image,
+.       then the [GDAL](<a class="reference external" href="http://www.gdal.org">http://www.gdal.org</a>) driver will be used in order to decode the image, supporting
+.       the following formats: [Raster](<a class="reference external" href="http://www.gdal.org/formats_list.html">http://www.gdal.org/formats_list.html</a>),
+.       [Vector](<a class="reference external" href="http://www.gdal.org/ogr_formats.html">http://www.gdal.org/ogr_formats.html</a>).
+.   -   If EXIF information is embedded in the image file, the EXIF orientation will be taken into account
+.       and thus the image will be rotated accordingly except if the flags &#64;ref IMREAD_IGNORE_ORIENTATION
+.       or &#64;ref IMREAD_UNCHANGED are passed.
+.   -   Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.
+.   -   By default number of pixels must be less than 2^30. Limit can be set using system
+.       variable OPENCV_IO_MAX_IMAGE_PIXELS
+.   
+.   &#64;param filename Name of file to be loaded.
+.   &#64;param flags Flag that can take values of cv::ImreadModes</p>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="module-xrf_explorer.server.image_to_cube_selection">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-xrf_explorer.server.image_to_cube_selection" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -355,8 +470,14 @@
             <ul>
 <li><a class="reference internal" href="#">xrf_explorer.server.image_to_cube_selection package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#xrf-explorer-server-image-to-cube-selection-image-to-cube-selection-module">xrf_explorer.server.image_to_cube_selection.image_to_cube_selection module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.image_to_cube_selection.image_to_cube_selection">xrf_explorer.server.image_to_cube_selection.image_to_cube_selection module</a><ul>
+<li><a class="reference internal" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.extract_selected_data"><code class="docutils literal notranslate"><span class="pre">extract_selected_data()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.get_scaled_cube_coordinates"><code class="docutils literal notranslate"><span class="pre">get_scaled_cube_coordinates()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.get_selected_data_cube"><code class="docutils literal notranslate"><span class="pre">get_selected_data_cube()</span></code></a></li>
+<li><a class="reference internal" href="#xrf_explorer.server.image_to_cube_selection.image_to_cube_selection.imread"><code class="docutils literal notranslate"><span class="pre">imread()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-xrf_explorer.server.image_to_cube_selection">Module contents</a></li>
 </ul>
 </li>
 </ul>
